@@ -1,0 +1,210 @@
+
+body{
+	line-height: 1.5;
+	font-family: sans-serif;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+img{
+	max-width: 100%;
+	vertical-align: middle;
+    border-radius: 10px;
+}
+/*.gallery*/
+.gallery{
+	width: 100%;
+	display: block;
+	min-height: 100vh;
+	background-color: #2a2932;
+	padding: 100px 0;
+}
+.gallery .gallery-filter{
+	padding: 0 15px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.gallery .gallery-filter .filter-item{
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin:0 10px;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	line-height: 1.2;
+	transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+	color: #ff9800;
+	border-color : #ff9800;
+}
+.gallery .gallery-item{
+	width: calc(100% / 3);
+	padding: 15px;
+}
+.gallery .gallery-item-inner img{
+	width: 100%;
+}
+.gallery .gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.gallery .gallery-item.hide{
+	display: none;
+}
+/*footer*/
+/*footer*/
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info h2 {
+    margin: 0;
+}
+
+.footer-info p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a,
+.footer-social a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+/*responsive*/
+/*@media(max-width: 991px){
+	.gallery .gallery-item{
+		width: 50%;
+	}
+}
+@media(max-width: 767px){
+    .gallery .gallery-item{
+		width: 100%;
+	}	
+	.gallery .gallery-filter .filter-item{
+		margin-bottom: 10px;
+	}
+}
+*/
+/* ... (CSS yang ada sebelumnya) */
+
+/*responsive*/
+@media (min-width: 779px) {
+	.gallery .gallery-item {
+		width: 50%;
+	}
+}
+
+@media (min-width: 660px) and (max-width: 778px) {
+	.gallery .gallery-item {
+		width: 50%;
+	}
+}
+
+@media (min-width: 450px) and (max-width: 659px) {
+	.gallery .gallery-item {
+		width: 100%;
+	}
+}
+
+@media (max-width: 449px) {
+	.gallery .gallery-item {
+		width: 100%;
+	}
+}
+/* responsive untuk Android dan iPhone */
+@media only screen and (max-width: 779px) {
+	.gallery .gallery-item {
+		width: 50%;
+	}
+}
+@media (max-width: 779px) {
+	.gallery .gallery-item {
+		width: 50%;
+		text-align: center; /* Membuat gambar berada di tengah secara horizontal */
+	}
+	
+	.gallery .gallery-item-inner img {
+		width: 100%; /* Pastikan gambar tetap responsif */
+		display: block; /* Mencegah margin bawah yang mungkin muncul */
+		margin: 0 auto;
+		margin-left:15px; /* Memastikan gambar berada di tengah secara horizontal */
+	}
+}
+@media (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+    }
+
+    .footer-links,
+    .footer-social {
+        margin-top: 20px;
+    }
+
+    .footer-links,
+    .footer-social ul {
+        text-align: center;
+    }
+
+    .footer-links ul li,
+    .footer-social ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
